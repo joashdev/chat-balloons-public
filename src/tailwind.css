@@ -1,0 +1,33 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+body {
+  overflow-x: hidden;
+  @apply bg-gray-900;
+}
+
+h1,
+p {
+  cursor: default;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-600;
+  @apply shadow-lg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400;
+  @apply rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
