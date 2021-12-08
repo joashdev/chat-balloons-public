@@ -1,53 +1,107 @@
-# `Vite + Vue 3 + Tailwind CSS (starter) ⚡`
+# Chat Balloons
 
-![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
+> View Live Here: [chatballoons.web.app](https://chatballoons.web.app)
 
-This starter template also includes:
+---
 
-- [Tailwind CSS v3.0.0-alpha ⚠](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.0.0-alpha.1)
-- [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
-- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.19, with 'preload' attr, check out index.html)
-- [Headless UI](https://headlessui.dev/vue/menu) - unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
-- [Heroicons](https://github.com/tailwindlabs/heroicons#vue) - beautiful hand-crafted SVG icons,
-by the makers of Tailwind CSS
+## Table of Contents
 
-First-party plugins needed for Tailwind UI:
+- [Description](#description)
+- [User Stories](#user-stories)
+- [Technologies](#technologies)
+- [Contributors](#contributors)
+- [Development](#development)
+- [Todo](#todo)
+- [Credits](#credits)
 
-- [tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
-- [tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
-- [tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
-- [tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+---
 
-### Getting Started 🚀
+## Description
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/web2033/vite-vue3-tailwind-starter)
+A public real-time chat application created for `Dev Jam`.
+
+---
+
+## User Stories
+
+- User can login using GMail
+- User can see previously sent messages
+- User can type message in the `input field`
+- Pressing `enter` or clicking the `send` button will send the typed message
+- Sent messages are saved in the database
+- Messages can be seen by everyone logged in
+- Messages are displayed realtime
+
+## Technologies
+
+- Vue 3
+- TailwindCSS
+- Firebase (Firestore, Auth, Hosting)
+- Vitejs
+
+---
+
+## Todo
+
+Future direction of the project:
+
+- multiple chat rooms (public and private)
+- sending of images and videos
+- `email and password` signin
+
+---
+
+## Contributors
+
+joashdev <[github/joashdev](https://github.com/joashdev)>
+
+---
+
+## Development
+
+> Clone or Download Repository
 
 ```sh
-npx degit web2033/vite-vue3-tailwind-starter vvt-app
-cd vvt-app
-```
+# git clone
+git clone https://github.com/joashdev/chat-balloons-public.git
 
-npm:
-```sh
+# goto directory
+cd chat-balloons-public
+
+# install dependencies
 npm i
-npm run dev
-npm run build
-npm run serve
 ```
 
-yarn:
+<br>
+
+> Create `.env.local` in the root directory
+
 ```sh
-yarn
-yarn dev
-yarn build
-yarn serve
+# example .env.local file
+VITE_FIREBASE_API_KEY=YOUR_FIREBASE_CONFIG
+VITE_FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_CONFIG
+VITE_FIREBASE_PROJECT_ID=YOUR_FIREBASE_CONFIG
+VITE_FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_CONFIG
+VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_FIREBASE_CONFIG
+VITE_FIREBASE_APP_ID=YOUR_FIREBASE_CONFIG
+VITE_FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_CONFIG
 ```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/web2033/vite-vue3-tailwind-starter)
+<br/>
 
-#### Bonus links
-- [Enabling https on localhost](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/112) (dev notes)
-- [Vite dev server with netlify dev support](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/113) (dev notes)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - recommended (instead of Vetur) VSCode extension built specifically for Vue 3
-- [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
-- [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
+> Serve Locally, Build, Deploy to Firebase
+
+```sh
+# serve locally
+npm run dev
+
+# build for production
+npm run build
+
+# deploy to Firebase
+npm run deploy-live # builds the project before deployment
+```
+
+## Credits
+
+- web2033 <[github/web2033](https://github.com/web2033)> - starter Vue template
